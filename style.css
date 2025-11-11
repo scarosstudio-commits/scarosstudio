@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --bg: #0b0b0b;
+  --red: #e00000;
+  --white: #ffffff;
+  --gray: #1a1a1a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid var(--red);
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+nav a {
+  color: var(--white);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 120px 20px 100px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0b0b0b 100%);
+}
+
+.hero h2 {
+  font-size: 2.8em;
+  color: var(--red);
+  text-shadow: 0 0 10px var(--red);
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--red);
+  color: var(--white);
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: var(--red);
+  box-shadow: 0 0 10px var(--red);
+}
+
+/* Game cards */
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.game-card {
+  background: var(--gray);
+  border: 2px solid var(--red);
+  box-shadow: 0 0 15px rgba(224, 0, 0, 0.4);
+  border-radius: 15px;
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--red);
+}
+
+.play-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--red);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  background: var(--white);
+  color: var(--bg);
+}
+
+/* About */
+.about {
+  text-align: left;
+  padding: 60px 20px;
+  background: #111;
+  border-top: 2px solid var(--red);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  background: #0a0a0a;
+  color: #aaa;
+}
